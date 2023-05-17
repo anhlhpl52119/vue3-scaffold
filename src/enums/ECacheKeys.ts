@@ -1,6 +1,4 @@
 export enum EAuthKey {
   AccessToken = 'ACCESS_TOKEN',
 }
-export enum EStorageKey {
-
-}
+export enum EStorageKey {}

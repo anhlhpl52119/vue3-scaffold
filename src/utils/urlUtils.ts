@@ -27,4 +27,5 @@ export function setObjToUrlParams(baseUrl: string, obj: object): string {
  * @param path URL path
  * @returns {string} return an string URL with unique slash
  */
-export const uniqueSlash = (path: string) => path.replace(/(https?:\/)|(\/)+/g, '$1$2');
+export const uniqueSlash = (path: string) =>
+  path.replace(/(https?:\/)|(\/)+/g, '$1$2');

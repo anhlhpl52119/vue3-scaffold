@@ -1,2 +1,2 @@
-import './assets/main.css';
+import '@/styles/index.css';
 export const setupAssets = () => ({});

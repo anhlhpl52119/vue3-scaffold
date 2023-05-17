@@ -1,7 +1,7 @@
-import App from './App.vue';
 import { createApp } from 'vue';
-import { setupPiniaStore, setupAssets } from '@/plugins';
+import App from './App.vue';
 import router from './router';
+import { setupPiniaStore, setupAssets } from '@/plugins';
 
 const app = createApp(App);
 

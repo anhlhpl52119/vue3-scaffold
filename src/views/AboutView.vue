@@ -1,15 +1,18 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <div>Hello Vue 3</div>
 </template>
+<script lang="ts" setup>
+/** Store */
+//const store = useStore();
 
-<style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
-</style>
+/** Props & Emit */
+//const props = defineProps<{ props: any }>();
+//const {props} = toRefs(props);
+//const emits =defineEmits(['emit']);
+
+/** Data */
+
+/** Method */
+//function _name() {}
+</script>
+<style scoped></style>

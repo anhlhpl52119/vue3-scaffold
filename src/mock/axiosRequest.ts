@@ -1,7 +1,7 @@
 import axios from 'axios';
+import type { AxiosRequestConfig, AxiosError, AxiosResponse } from 'axios';
 import { localStore } from '@/utils/Storage';
 import { EAuthKey } from '@/enums/ECacheKeys';
-import type { AxiosRequestConfig, AxiosError, AxiosResponse } from 'axios';
 import { uniqueSlash } from '@/utils/urlUtils';
 interface RequestOptions {
   /** Whether to get data directly, while ignoring message, etc. */

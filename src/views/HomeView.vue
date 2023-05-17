@@ -1,9 +1,18 @@
-<script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue';
-</script>
-
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <div>Hello Vue 3</div>
 </template>
+<script lang="ts" setup>
+/** Store */
+//const store = useStore();
+
+/** Props & Emit */
+//const props = defineProps<{ props: any }>();
+//const {props} = toRefs(props);
+//const emits =defineEmits(['emit']);
+
+/** Data */
+
+/** Method */
+//function _name() {}
+</script>
+<style scoped></style>
