@@ -1,0 +1,15 @@
+
+*.sh
+node_modules/
+*.md
+*.ttf
+.vscode
+.idea
+dist
+/public
+/docs
+.local
+/bin
+/src/mock
+components.d.ts
+client/dist/
