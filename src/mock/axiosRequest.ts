@@ -58,7 +58,7 @@ service.interceptors.response.use(
   },
   (error: AxiosError<{ messages: string[] }>) => {
     // nếu Error không có data từ serser trả về & ko có 'errorMsg' => Lỗi ko xác định
-    const errMsg = error?.response?.data.messages ?? UNKNOWN_ERROR;
+    // const errMsg = error?.response?.data.messages ?? UNKNOWN_ERROR;
     // message.error(errMsg);
     return Promise.reject(error);
   }
@@ -76,8 +76,8 @@ export const request = async <T>(
   const {
     isAuth = false,
     isGetDataDirectly = true,
-    successMsg,
-    errorMsg,
+    // successMsg,
+    // errorMsg,
   } = options;
   try {
     const targetURL = isAuth ? VITE_BASE_AUTH : VITE_BASE_MOCK;

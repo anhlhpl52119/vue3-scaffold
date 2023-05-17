@@ -10,6 +10,5 @@ dist
 /docs
 .local
 /bin
-/src/mock
 components.d.ts
 client/dist/
