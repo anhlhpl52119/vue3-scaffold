@@ -2,21 +2,21 @@ declare namespace API {
   //   import type {  } from '@/enums/EUserRole';
   import type { EUserRole } from '@/enums/EUserRole';
 
-  type LoginParams = {
+  interface LoginRqBody {
     login: string;
     password: string;
-  };
-  type ChangePassWithTokenParams = {
+  }
+  interface ChangePassByTokenRqBody {
     token: string;
     new_password: string;
     confirm_password: string;
-  };
-  type forgotPassWithEmailParams = {
+  }
+  interface ChangePassByEmailRqBody {
     login: string;
     email: string;
-  };
+  }
 
-  type LoginResult = {
+  type ResToken = {
     token: string;
   };
 
