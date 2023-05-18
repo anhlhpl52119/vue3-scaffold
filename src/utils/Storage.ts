@@ -1,7 +1,7 @@
 import type { EAuthKey, EStorageKey } from '@/enums/ECacheKeys';
 
 // Default expire time item
-const DEFAULT_CACHE_TIME = 60 * 60 * 24 * 7;
+const DEFAULT_CACHE_TIME = 60 * 60 * 24 * 2; // 2 days
 
 /**
  * Create a local cache object

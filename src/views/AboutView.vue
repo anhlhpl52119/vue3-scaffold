@@ -1,5 +1,5 @@
 <template>
-  <div>Hello Vue 3</div>
+  <div>Hello Vue about</div>
 </template>
 <script lang="ts" setup>
 /** Store */
