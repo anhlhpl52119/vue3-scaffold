@@ -4,10 +4,10 @@ import { EReqMethod } from '@/enums/EHttpReq';
 /**
  * @description login API
  * @param {loginParams} loginParams
- * @callback request<Promise<API.UserInfo>>
+ * @callback request<API.UserInfo>
  */
-export function login(loginParams: API.LoginParams) {
-  return request<Promise<API.UserInfo[]>>(
+export async function login(loginParams: API.LoginRqBody) {
+  return request<API.UserInfo[]>(
     {
       url: 'login',
       method: EReqMethod.POST,
@@ -23,10 +23,10 @@ export function login(loginParams: API.LoginParams) {
 /**
  * @description login API
  * @param {loginParams} loginParams
- * @callback request<Promise<API.LoginResult>>
+ * @callback request<API.LoginResult>
  */
-export function loginToken(loginParams: API.LoginParams) {
-  return request<Promise<API.LoginResult>>(
+export async function getToken(loginParams: API.LoginRqBody) {
+  return request<API.ResToken>(
     {
       url: 'login_token',
       method: EReqMethod.POST,
@@ -39,7 +39,8 @@ export function loginToken(loginParams: API.LoginParams) {
     }
   );
 }
-export function logout() {
+
+export async function logout() {
   return request(
     {
       url: 'logout',
@@ -52,8 +53,8 @@ export function logout() {
   );
 }
 
-export function verifyUser() {
-  return request<Promise<API.UserInfo>>(
+export async function verifyUser() {
+  return request<API.UserInfo>(
     {
       url: 'auth_verify',
       method: EReqMethod.GET,
@@ -64,7 +65,7 @@ export function verifyUser() {
     }
   );
 }
-export function verifyToken() {
+export async function verifyToken() {
   return request<API.UserInfo>(
     {
       url: 'auth_verify',
@@ -77,7 +78,9 @@ export function verifyToken() {
   );
 }
 
-export function forgotPassword(userEmail: Pick<API.LoginParams, 'login'>) {
+export async function forgotPassword(
+  userEmail: Pick<API.LoginRqBody, 'login'>
+) {
   return request(
     {
       url: 'forgot_password',
@@ -90,7 +93,8 @@ export function forgotPassword(userEmail: Pick<API.LoginParams, 'login'>) {
     }
   );
 }
-export function forgotPasswordWithEmail(params: API.forgotPassWithEmailParams) {
+
+export function changePassByEmail(params: API.ChangePassByEmailRqBody) {
   return request(
     {
       url: 'forgot_password_with_email',
@@ -104,7 +108,7 @@ export function forgotPasswordWithEmail(params: API.forgotPassWithEmailParams) {
   );
 }
 
-export function changePasswordWithToken(params: API.ChangePassWithTokenParams) {
+export function changePassByToken(params: API.ChangePassByTokenRqBody) {
   return request(
     {
       url: 'forgot_password',
