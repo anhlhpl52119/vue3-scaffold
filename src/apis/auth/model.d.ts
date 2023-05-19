@@ -16,11 +16,11 @@ declare namespace API {
     email: string;
   }
 
-  type ResToken = {
+  interface ResToken {
     token: string;
-  };
+  }
 
-  type UserInfo = {
+  interface UserInfo {
     id: string;
     email: string | null;
     username: string;
@@ -32,5 +32,5 @@ declare namespace API {
     must_change_password: boolean;
     initial_password: string;
     role: EUserRole;
-  };
+  }
 }
