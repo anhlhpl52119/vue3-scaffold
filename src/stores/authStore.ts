@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia';
 import { localStore } from '@/utils/Storage';
 import { EAuthKey } from '@/enums/ECacheKeys';
-import { loginToken, logout, verifyToken } from '@/apis/auth';
+import { userApi } from '@/apis';
 import { EUserRole } from '@/enums/EUserRole';
 
 interface IUserAuthState {
@@ -32,18 +32,18 @@ export const useUserAuth = defineStore({
     },
   },
   actions: {
-    async loginReturnToken(loginParams: API.LoginParams) {
+    async loginReturnToken(loginParams: API.LoginRqBody) {
       try {
-        const { token } = await loginToken(loginParams);
+        const { token } = await userApi.getToken(loginParams);
         this._saveTokenToStorage(token);
         return this.afterLogin();
       } catch (error) {
         return Promise.reject(error);
       }
     },
-    async loginByToken(loginParams: API.LoginParams) {
+    async loginByToken(loginParams: API.LoginRqBody) {
       try {
-        const { token } = await loginToken(loginParams);
+        const { token } = await userApi.getToken(loginParams);
         this._saveTokenToStorage(token);
         return this.afterLogin();
       } catch (error) {
@@ -51,7 +51,7 @@ export const useUserAuth = defineStore({
       }
     },
     async doLogout() {
-      await logout();
+      await userApi.logout();
       this.resetToken();
     },
 
@@ -62,7 +62,7 @@ export const useUserAuth = defineStore({
 
     async afterLogin() {
       try {
-        const resUserInfo = await verifyToken();
+        const resUserInfo = await userApi.verifyToken();
         // const resUserInfo = await verifyUser();
         this.userInfo = resUserInfo;
         this._generateUserRoutes(this.getUserRole);
