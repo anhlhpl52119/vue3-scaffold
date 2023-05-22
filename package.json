@@ -26,6 +26,7 @@
     "@vue/eslint-config-prettier": "^7.1.0",
     "@vue/eslint-config-typescript": "^11.0.3",
     "unplugin-auto-import": "^0.15.2",
+    "vite-plugin-svg-icons": "^2.0.1",
     "@vue/tsconfig": "^0.4.0",
     "eslint": "^8.39.0",
     "eslint-plugin-vue": "^9.11.0",
