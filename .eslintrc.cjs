@@ -1,9 +1,9 @@
 /* eslint-env node */
-require('@rushstack/eslint-patch/modern-module-resolution')
+require('@rushstack/eslint-patch/modern-module-resolution');
 
 module.exports = {
   root: true,
-  'extends': [
+  extends: [
     'plugin:vue/vue3-essential',
     'eslint:recommended',
     '@vue/eslint-config-typescript',
@@ -12,7 +12,7 @@ module.exports = {
   ],
   plugins: ['@typescript-eslint', 'prettier', 'import'],
   parserOptions: {
-    ecmaVersion: 'latest'
+    ecmaVersion: 'latest',
   },
   overrides: [
     {
@@ -44,7 +44,16 @@ module.exports = {
     'import/order': [
       'error',
       {
-        groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'object', 'type'],
+        groups: [
+          'builtin',
+          'external',
+          'internal',
+          'parent',
+          'sibling',
+          'index',
+          'object',
+          'type',
+        ],
 
         pathGroups: [
           {
@@ -57,13 +66,13 @@ module.exports = {
             group: 'external',
             position: 'before',
           },
-          // {
-          //   pattern: 'ant-design-vue',
-          //   group: 'internal',
-          // },
+          {
+            pattern: 'ant-design-vue',
+            group: 'internal',
+          },
         ],
         pathGroupsExcludedImportTypes: ['type'],
       },
     ],
   },
-}
+};
