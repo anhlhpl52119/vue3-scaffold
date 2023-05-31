@@ -1,5 +1,5 @@
 import { request } from '@/mock/axiosRequest';
-import { EReqMethod } from '@/enums/EHttpReq';
+import { EReqMethod } from '@/enums/http-request';
 
 /**
  * @description login API
