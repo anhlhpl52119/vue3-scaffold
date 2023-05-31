@@ -1,4 +1,4 @@
-import type { EAuthKey, EStorageKey } from '@/enums/ECacheKeys';
+import type { EAuthKey, EStorageKey } from '@/enums/cache';
 
 // Default expire time item
 const DEFAULT_CACHE_TIME = 60 * 60 * 24 * 2; // 2 days

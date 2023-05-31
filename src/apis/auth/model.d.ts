@@ -1,7 +1,6 @@
 declare namespace API {
-  //   import type {  } from '@/enums/EUserRole';
-  import type { EUserRole } from '@/enums/EUserRole';
-
+  import type { EUserRole } from '@/enums/user';
+  //FIXME: this import not working
   interface LoginRqBody {
     login: string;
     password: string;

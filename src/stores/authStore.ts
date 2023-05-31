@@ -1,8 +1,8 @@
 import { defineStore } from 'pinia';
 import { localStore } from '@/utils/Storage';
-import { EAuthKey } from '@/enums/ECacheKeys';
+import { EAuthKey } from '@/enums/cache';
 import { userApi } from '@/apis';
-import { EUserRole } from '@/enums/EUserRole';
+import { EUserRole } from '@/enums/user';
 
 interface IUserAuthState {
   token: string | null;

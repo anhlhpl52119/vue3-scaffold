@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import type { RouteRecordRaw } from 'vue-router';
-import { ERouteName } from '@/enums/ERoute';
+import { ERouteName } from '@/enums/route-name';
 
 type ICustomRouteRecord = Omit<RouteRecordRaw, 'name'> & { name: ERouteName };
 
