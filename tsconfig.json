@@ -1,11 +1,21 @@
 {
-  "files": [],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    },
-    {
-      "path": "./tsconfig.app.json"
+  "extends": "@tsconfig/node18/tsconfig.json",
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "types/**/*.d.ts",
+    "vite.config.ts"
+  ],
+  "exclude": ["node_modules", "dist", "**/*.js", "**/*.md", "src/**/*.md"],
+  "compilerOptions": {
+    "composite": true,
+    "module": "ESNext",
+    "types": ["node", "vite/client"],
+    "lib": ["DOM",  "ESNext"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
     }
-  ]
+  }
 }
