@@ -10,11 +10,6 @@ const routesRecord: ICustomRouteRecord[] = [
     name: ERouteName.Home,
     component: () => import('../views/HomeView.vue'),
   },
-  {
-    path: '/about',
-    name: ERouteName.About,
-    component: () => import('../views/AboutView.vue'),
-  },
 ];
 
 const router = createRouter({

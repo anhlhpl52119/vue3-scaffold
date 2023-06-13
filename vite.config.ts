@@ -4,6 +4,7 @@ import { defineConfig, loadEnv } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import AutoImport from 'unplugin-auto-import/vite';
 import vueJsx from '@vitejs/plugin-vue-jsx';
+import Components from 'unplugin-vue-components/vite';
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
 import type { UserConfig, ConfigEnv } from 'vite';
 
@@ -28,27 +29,18 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
         // Specify symbolId format
         symbolId: 'svg-icon-[dir]-[name]',
       }),
+      Components({
+        dts: 'types/components.d.ts',
+      }),
     ],
     resolve: {
       alias: {
         '@': fileURLToPath(new URL('./src', import.meta.url)),
       },
     },
-    // css: {
-    //   preprocessorOptions: {
-    //     less: {
-    //       javascriptEnabled: true,
-    //       modifyVars: {},
-    //       additionalData: `
-    //         @import "@/styles/varriables.less";
-    //       `,
-    //     },
-    //   },
-    // },
     server: {
       host: true,
       port: 5000,
-      // host: '0.0.0.0',
       proxy: {
         '/api/v1': {
           target: VITE_BASE_API,
