@@ -30,7 +30,7 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
         symbolId: 'svg-icon-[dir]-[name]',
       }),
       Components({
-        dts: 'types/components.d.ts',
+        dts: 'types/components.d.ts', //broken with ts > 5.1 - 14 Jun 2023
       }),
     ],
     resolve: {
