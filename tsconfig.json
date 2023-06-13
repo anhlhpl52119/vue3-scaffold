@@ -1,4 +1,15 @@
 {
+  "version": "5.0.4",
+  "compilerOptions": {
+    "composite": true,
+    "module": "ESNext",
+    "types": ["node", "vite/client"],
+    "lib": ["DOM", "ESNext"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
   "extends": "@tsconfig/node18/tsconfig.json",
   "include": [
     "src/**/*.ts",
@@ -7,15 +18,5 @@
     "types/**/*.d.ts",
     "vite.config.ts"
   ],
-  "exclude": ["node_modules", "dist", "**/*.js", "**/*.md", "src/**/*.md"],
-  "compilerOptions": {
-    "composite": true,
-    "module": "ESNext",
-    "types": ["node", "vite/client"],
-    "lib": ["DOM",  "ESNext"],
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    }
-  }
+  "exclude": ["node_modules", "dist", "**/*.js", "**/*.md", "src/**/*.md"]
 }
