@@ -1,7 +1,7 @@
 <template>
-  <router-view #="{ Component }">
+  <RouterView #="{ Component }">
     <component :is="Component" />
-  </router-view>
+  </RouterView>
 </template>
 <script lang="ts" setup>
 </script>
