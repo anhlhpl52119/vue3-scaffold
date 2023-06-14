@@ -5,18 +5,18 @@ import { ERouteName } from '@/enums/route-name';
 type ICustomRouteRecord = Omit<RouteRecordRaw, 'name'> & { name: ERouteName };
 
 const routesRecord: ICustomRouteRecord[] = [
-  {
-    path: '/',
-    name: ERouteName.Home,
-    component: () => import('../views/HomeView.vue'),
-  },
+    {
+        path: '/',
+        name: ERouteName.Home,
+        component: () => import('../views/HomeView.vue'),
+    },
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
-  routes: routesRecord as RouteRecordRaw[],
+    history: createWebHistory(),
+    routes: routesRecord as RouteRecordRaw[],
 });
 router.beforeEach((to, from, next) => {
-  return next();
+    return next();
 });
 export default router;

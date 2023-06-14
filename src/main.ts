@@ -6,13 +6,13 @@ import { setupPiniaStore, setupAssets } from '@/plugins';
 const app = createApp(App);
 
 function setupPlugins() {
-  setupAssets();
-  setupPiniaStore(app);
+    setupAssets();
+    setupPiniaStore(app);
 }
 async function setupApp() {
-  app.use(router);
-  await router.isReady();
-  app.mount('#app');
+    app.use(router);
+    await router.isReady();
+    app.mount('#app');
 }
 //Process....
 setupPlugins();
