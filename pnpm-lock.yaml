@@ -58,7 +58,7 @@ devDependencies:
     specifier: ~3.0.2
     version: 3.0.2
   typescript:
-    specifier: 5.0.4
+    specifier: ^5.0.4
     version: 5.0.4
   unplugin-auto-import:
     specifier: ^0.15.2
