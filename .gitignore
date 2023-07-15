@@ -6,7 +6,6 @@ coverage
 #auto import
 types/components.d.ts
 
-
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
