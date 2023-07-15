@@ -1,0 +1,39 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+    "strictFunctionTypes": false,
+    "baseUrl": ".",
+    // fix i18-ally
+    "preserveValueImports": false,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "experimentalDecorators": true,
+    "lib": ["dom", "esnext"],
+    "noImplicitAny": false,
+    "skipLibCheck": false, // check types
+    "removeComments": true,
+    // "types": ["webpack-env"],
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "include": [
+    "mock/**/*",
+    "src/**/*.ts",
+    "**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "types/**/*.d.ts",
+    "types/**/*.ts"
+  ],
+  "exclude": ["node_modules", "dist", "**/*.js", "**/*.md", "src/**/*.md"]
+}
