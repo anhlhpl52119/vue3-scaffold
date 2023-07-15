@@ -1,0 +1,13 @@
+node_modules
+dist
+dist-ssr
+coverage
+
+#auto import
+types/components.d.ts
+
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
