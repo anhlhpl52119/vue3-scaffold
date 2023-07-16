@@ -15,6 +15,5 @@ defineProps<{ foo: string }>();
 /** Data */
 
 /** Method */
-//function _name() {}
 </script>
 <style scoped></style>
