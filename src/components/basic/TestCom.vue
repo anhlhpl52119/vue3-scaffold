@@ -12,7 +12,6 @@ defineProps<{ foo: string }>();
 //const {props} = toRefs(props);
 //const emits =defineEmits(['emit']);
 
-/** Data */
 
 </script>
 <style scoped></style>
