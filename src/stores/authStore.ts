@@ -89,7 +89,6 @@ export const useUserAuth = defineStore({
                     //TODO Generate guest Routes
                     break;
                 default:
-                    // Do someThing
                     break;
             }
         },
