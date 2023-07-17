@@ -1,6 +1,6 @@
 <template>
   <div>
-    Hello Vue 3
+    Hell Vue 3
     <span>
       <TestCom foo="sadsd" nasm="sdsd" sdsd=" sdsd"></TestCom>
     </span>
