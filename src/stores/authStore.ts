@@ -11,7 +11,7 @@ interface IUserAuthState {
 export const useUserAuth = defineStore({
     id: 'auth',
     state: (): IUserAuthState => ({
-        token: localStore.get(EAuthKey.AccessToken), // get saved "token" in when setup sucess
+        token: localStore.get(EAuthKey.AccessToken),
         userInfo: {} as API.UserInfo,
     }),
     getters: {
