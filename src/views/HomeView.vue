@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="font-bold">
     Hell Vue 3
-    <span>
+    <span >
       <TestCom foo="sadsd" nasm="sdsd" sdsd=" sdsd"></TestCom>
     </span>
   </div>
